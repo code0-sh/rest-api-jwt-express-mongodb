@@ -221,4 +221,4 @@ Response `201`
 ```
 
 # License
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](./LICENSE)
