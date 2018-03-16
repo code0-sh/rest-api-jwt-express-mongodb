@@ -47,7 +47,7 @@ Start by cloning this repository
 
 ```sh
 # HTTPS
-$ git clone https://github.com/
+$ git clone https://github.com/code0-sh/rest-api-jwt-express-mongodb.git
 ```
 
 then
