@@ -1,0 +1,85 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "api",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/server.js --exec babel-node --presets babel-preset-env",
+    "test": "jest",
+    "build": "webpack --mode production --module-bind 'js=babel-loader'",
+    "flow": "flow",
+    "precommit": "lint-staged",
+    "format": "prettier-standard 'src/**/*.js'"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
+    "rules": {
+      "flowtype/define-flow-type": 1,
+      "flowtype/use-flow-type": 1
+    },
+    "ignore": [
+      "flow-typed/"
+    ]
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "~1.18.2",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-rate-limit": "^2.11.0",
+    "helmet": "^3.12.0",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.6",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "pug": "2.0.0-beta11",
+    "rand-token": "^0.4.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "dotenv": "^5.0.1",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "flow-bin": "^0.66.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "nodemon": "^1.15.1",
+    "prettier-standard": "^8.0.0",
+    "standard": "^11.0.0",
+    "superagent": "^3.8.2",
+    "supertest": "^3.0.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
