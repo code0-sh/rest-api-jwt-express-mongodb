@@ -36,11 +36,13 @@ $ brew install yarn
 
 Login to create DB 
 ```sh
+## start only once
+$ mongod --config /usr/local/etc/mongod.conf
 # login
 $ mongo
 # create DB
 # Please also set your DB name in config.js
-$ mongo databaseName
+$ use databaseName
 ```
 
 Start by cloning this repository
